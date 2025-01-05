@@ -2,7 +2,7 @@ module.exports = {
   title: `Dev Namoo`,
   description: `Sol-Namoo's dev log`,
   language: `en`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://sol-namoo.github.io/dev-blog/`,
+  siteUrl: `https://sol-namoo.github.io/`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
