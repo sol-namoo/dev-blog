@@ -1,110 +1,93 @@
 @use '../../styles/mixins'as *;
 
-@keyframes blinking-cursor {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 .bio {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  margin-top: 120px;
-  margin-bottom: 120px;
-
-  color: var(--primary-text-color);
+  margin: 80px 0;
+  padding: 40px;
+  background-color: var(--card-background-color);
+  border-radius: 20px;
+  transition: all 0.3s ease;
 
   @include md {
-    flex-direction: row;
-    align-items: center;
+    margin: 120px 0;
   }
 
   .introduction {
     display: flex;
     flex-direction: column;
     word-break: keep-all;
-
-    .react-rotating-text-cursor {
-      animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
-    }
-
-    strong {
-      display: inline-block;
-      font-weight: 600;
-    }
+    text-align: center;
 
     &.korean {
-      font-weight: 100;
+      font-family: 'Pretendard', sans-serif; // Updated font
+      font-weight: 300;
       font-size: 32px;
-      line-height: 1.2;
+      line-height: 1.4;
+      color: var(--primary-text-color);
 
       .title {
-        .react-rotating-text-cursor {
-          font-size: 35px;
-          line-height: 35px;
+        margin-bottom: 24px;
+
+        .highlight {
+          color: var(--primary-color);
+          font-weight: 600;
         }
       }
 
       @include md {
         font-size: 40px;
-
-        .title {
-          .react-rotating-text-cursor {
-            font-size: 45px;
-            line-height: 45px;
-          }
-        }
       }
-
-
     }
 
     &.english {
-      font-family: 'montserrat';
+      font-family: 'Montserrat', sans-serif; // Kept Montserrat for English
       font-size: 25px;
-      line-height: 1.2;
+      line-height: 1.4;
 
       @include md {
-        font-size: 45px;
+        font-size: 35px;
       }
 
       .name {
-        font-size: 35px;
+        font-size: 40px;
         font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 8px;
       }
 
       .job {
-        font-size: 35px;
+        font-size: 30px;
+        color: var(--secondary-color);
       }
 
       .description {
-        font-weight: 200;
-        margin-top: 8px;
+        font-weight: 300;
+        margin-top: 16px;
         font-size: 20px;
+        color: var(--secondary-text-color);
       }
 
       .social-links {
-        margin-top: 20px;
+        margin-top: 24px;
         display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        .icon {
+          color: var(--bio-link-icon-color);
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+          }
+        }
       }
     }
   }
 
-  .thumbnail-wrapper {
-    display: none;
-
-    @include md {
-      display: block;
-    }
-  }
+  // Removed thumbnail-wrapper
 }

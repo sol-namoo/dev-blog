@@ -42,9 +42,9 @@ function Bio({ author, language = 'ko' }) {
           </div>
         </div>
       )}
-      <div className="thumbnail-wrapper">
+      {/* <div className="thumbnail-wrapper">
         <Image style={{ width: 250, height: 250 }} src={bio.thumbnail} alt="thumbnail" />
-      </div>
+      </div> */}
     </div>
   );
 }
