@@ -25,26 +25,6 @@ function PageHeader({ siteTitle, isHomePage }) {
         }
       `}
       render={(data) => (
-        // <header className="page-header-wrapper">
-        //   <div className="page-header">
-        //     <div className="front-section">
-        //       <Link className="link" to="/">
-        //         {siteTitle}
-        //       </Link>
-        //     </div>
-        //     <div className="trailing-section">
-        //       <Link className="link" to="/about">
-        //         about
-        //       </Link>
-        //       <Link className="link" to="/posts">
-        //         posts
-        //       </Link>
-        //       <PostSearch
-        //         posts={data.allMarkdownRemark.edges.map(({ node }) => new Post(node, true))}
-        //       />
-        //     </div>
-        //   </div>
-        // </header>
         <header>
           <div className="page-header-wrapper">
             <div className="page-header">
@@ -68,10 +48,8 @@ function PageHeader({ siteTitle, isHomePage }) {
           </div>
           {isHomePage && (
             <div className="home-header-content">
-              <h1 className="title">Frontend Development & Beyond</h1>
-              <p className="subtitle">
-                Crafting modern web experiences with clean code and thoughtful design
-              </p>
+              <h1 className="title">Code, design, perform!</h1>
+              <p className="subtitle">Act 1: Crafting delightful web moments ✨</p>
             </div>
           )}
         </header>
