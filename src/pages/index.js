@@ -2,8 +2,8 @@ import React, { useCallback, useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layout';
 import Seo from '../components/seo';
-import Bio from '../components/bio';
 import Post from '../models/post';
+import LatestPosts from '../components/post-tabs/latest-posts';
 
 import { getUniqueCategories } from '../utils/helpers';
 import PostTabs from '../components/post-tabs';
@@ -17,16 +17,9 @@ function HomePage({ data }) {
   const onTabIndexChange = useCallback((e, value) => setTabIndex(value), []);
 
   return (
-    <Layout>
+    <Layout isHomePage>
       <Seo title="Home" />
-      <Bio author={author} language={language} />
-      <PostTabs
-        posts={posts}
-        onChange={onTabIndexChange}
-        tabs={categories}
-        tabIndex={tabIndex}
-        showMoreButton
-      />
+      <LatestPosts posts={posts} />
     </Layout>
   );
 }
@@ -35,7 +28,7 @@ export default HomePage;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }, limit: 3) {
       edges {
         node {
           id

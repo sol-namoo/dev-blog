@@ -34,6 +34,7 @@ html {
 // dark mode colors
 html[data-theme='dark'] {
   --background-color: #141414; // Night
+  --card-background-color: #232326; // Slightly lighter than the background
   --primary-color: #bcb4ff; // Periwinkle (유지)
   --accent-color: rgba(233, 252, 135, 0.8); // Lemon (투명도 조정)
   --secondary-color: rgba(255, 190, 152, 0.8); // Peach Fuzz (투명도 조정)
@@ -55,7 +56,7 @@ html[data-theme='dark'] {
 
   --chip-background-color: var(--accent-color);
   --link-text-color: var(--primary-color);
-  --post-card-border-color: #232326; // Slightly lighter than the background
+  --post-card-border-color: var(--secondary-color);
 
   --markdown-table-even-cell-background-color: rgba(233, 252, 135, 0.1);
   --markdown-table-border-color: var(--secondary-color);

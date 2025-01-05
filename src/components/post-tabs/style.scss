@@ -57,6 +57,30 @@
       }
     }
   }
+}
 
+.latest-posts {
+  margin: 48px 0;
 
+  .latest-posts-title {
+    font-family: $font-family-heading;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  .post-tabs-wrapper {
+    .post-tabs {
+      display: none; // 탭을 숨깁니다
+    }
+
+    .post-card-column-wrapper {
+      .post-card-wrapper {
+        margin-bottom: 24px;
+      }
+    }
+  }
 }
