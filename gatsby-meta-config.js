@@ -2,11 +2,11 @@ module.exports = {
   title: `Dev Namoo`,
   description: `Sol-Namoo's dev log`,
   language: `en`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://github.com/sol-namoo/dev-blog`,
+  siteUrl: `https://sol-namoo.github.io/dev-blog/`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: ``, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `sol-namoo/dev-blog`,
     },
   },
   ga: '0', // Google Analytics Tracking ID
