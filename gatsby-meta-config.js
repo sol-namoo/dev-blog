@@ -6,7 +6,7 @@ module.exports = {
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: `sol-namoo/dev-blog`,
+      repo: `sol-namoo/sol-namoo.github.io`,
     },
   },
   ga: '0', // Google Analytics Tracking ID

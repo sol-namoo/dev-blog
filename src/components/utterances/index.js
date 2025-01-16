@@ -4,15 +4,18 @@ import { getValueFromLocalStorage } from '../../utils/localStorage';
 const url = 'https://utteranc.es';
 const branch = 'master';
 
-const getTheme = () => getValueFromLocalStorage('isDarkMode') ? 'photon-dark' : 'github-light'
+const getTheme = () => (getValueFromLocalStorage('isDarkMode') ? 'gruvbox-dark' : 'github-light');
 
 const resetChangeListener = () => {
   const utterances = document.querySelector('iframe')?.contentWindow;
-  utterances?.postMessage({
-    type: 'set-theme',
-    theme: getTheme()
-  }, url);
-}
+  utterances?.postMessage(
+    {
+      type: 'set-theme',
+      theme: getTheme(),
+    },
+    url,
+  );
+};
 
 function Utterances({ repo, path }) {
   const rootElm = createRef();
@@ -27,7 +30,7 @@ function Utterances({ repo, path }) {
       repo,
       branch,
       theme: getTheme(),
-      label: 'comment',
+      label: '✨comment✨💬 ',
       async: true,
       'issue-term': 'pathname',
       crossorigin: 'anonymous',
@@ -37,7 +40,7 @@ function Utterances({ repo, path }) {
       utterances.setAttribute(configKey, utterancesConfig[configKey]);
     });
     rootElm.current.appendChild(utterances);
-    window.addEventListener('theme', resetChangeListener)
+    window.addEventListener('theme', resetChangeListener);
     isUtterancesLoaded.current = true;
   }, [repo, rootElm, path]);
 
