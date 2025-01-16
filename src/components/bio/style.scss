@@ -26,7 +26,6 @@
       font-weight: 300;
       font-size: 32px;
       line-height: 1.4;
-      color: var(--primary-text-color);
 
       .title {
         margin-bottom: 24px;
@@ -46,6 +45,7 @@
       font-family: 'Montserrat', sans-serif; // Kept Montserrat for English
       font-size: 25px;
       line-height: 1.4;
+      // color: var(--primary-text-color);
 
       @include md {
         font-size: 35px;
